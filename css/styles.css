@@ -13,14 +13,6 @@
   --ff-size-regular: clamp(1em, 1em + max(1vw, 1vh), 7.5em);
 }
 
-/* Text: #330000
-Body background: #ffffcc
-Header and footer background: #ccaa66
-Left (navigation) column background: #E8D882
-Right (main content) column background: #f1e8b0
-The text is displayed in Verdana font.  */
-
-
 *, 
 *::before, 
 *::after {
@@ -63,7 +55,6 @@ a {
 main { 
   background-color: var(--clr-bg-main);
   width: 100%;
-  
 }
 
 nav,
@@ -107,6 +98,20 @@ nav > ul > li > a:hover {
   background-color: var(--clr-bg-nav-highlight);
 }
 
+
+/* ========================================================================== */
+
+/* Start of Page Header */
+
+body > header > a {
+  display: block;
+  width: 100%;
+  font-size: var(--ff-size-regular);
+  font-weight: 800;
+}
+
+
+/* End of Page Header */
 
 /* ========================================================================== */
 
