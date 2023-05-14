@@ -110,7 +110,6 @@ body > header > a {
   font-weight: 800;
 }
 
-
 /* End of Page Header */
 
 /* ========================================================================== */
@@ -173,5 +172,30 @@ body > header > a {
 #home > div > a:hover {
   background-color: var(--clr-bg-header-footer-highlight);
   border-color: var(--clr-bg-header-footer-highlight);
+}
+
+/* End of Home Section */
+
+/* ========================================================================== */
+
+/* Start of Menu Section */
+
+#menu > .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1em;
+  height: 5em;
+}
+
+#menu > .grid-container > * {
+  background-color:pink;
+}
+
+#menu > .grid-container > div > div > img {
+  opacity: 0.2;
+  padding: 0.5em;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
 
 }
