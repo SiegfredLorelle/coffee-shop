@@ -29,12 +29,12 @@ body {
   color: var(--clr-text);
 }
 
-body >.page-wrapper > .main-wrapper > header, 
-body >.page-wrapper > .main-wrapper > footer {
+body > header, 
+body > footer {
   background-color: var(--clr-bg-header-footer);
 }
 
-.nav-container {
+nav {
   background-color: var(--clr-bg-nav);
   position: sticky;
   position: -webkit-sticky;
@@ -45,11 +45,13 @@ body >.page-wrapper > .main-wrapper > footer {
 
 main { 
   background-color: var(--clr-bg-main);
+  width: 100%;
   
 }
 
-body >.page-wrapper > .main-wrapper > header, 
-body >.page-wrapper > .main-wrapper > footer,
+nav,
+body > header, 
+body > footer,
 main > * {
   padding: 1em;
 }
@@ -60,10 +62,9 @@ section {
 }
 
 .page-wrapper {
-  display: flex;
-  justify-content: space-between;
 }
 
 .main-wrapper {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
