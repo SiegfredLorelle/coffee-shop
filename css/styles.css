@@ -37,8 +37,19 @@ body > footer {
 nav {
   background-color: var(--clr-bg-nav);
 }
-
 main { 
   background-color: var(--clr-bg-main);
 }
 
+body > header,
+body > footer,
+main > * {
+  padding: 1em;
+}
+
+
+.main-container {
+  display: grid;
+  /* grid-auto-flow: column; */
+  grid-template-columns: 0.1fr 1fr;
+}
