@@ -183,6 +183,7 @@ body > header > a {
 
 
 #menu > .grid-container {
+  margin: 1em;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   gap: 1em;
