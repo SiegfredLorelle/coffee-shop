@@ -30,6 +30,7 @@ body {
   font-family: Verdana, sans-serif;
   background-color: var(--clr-bg-body);
   color: var(--clr-text);
+  scroll-behavior: smooth;
 }
 
 body > header, 
