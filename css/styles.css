@@ -1,0 +1,44 @@
+:root {
+  --clr-text: #330000;
+  --clr-bg-body: #ffffcc;
+  --clr-bg-header-footer: #ccaa66;
+  --clr-bg-nav: #E8D882;
+  --clr-bg-main: #f1e8b0;
+}
+
+/* Text: #330000
+Body background: #ffffcc
+Header and footer background: #ccaa66
+Left (navigation) column background: #E8D882
+Right (main content) column background: #f1e8b0
+The text is displayed in Verdana font.  */
+
+
+*, 
+*::before, 
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, 
+body {
+  font-family: Verdana, sans-serif;
+  background-color: var(--clr-bg-body);
+  color: var(--clr-text);
+}
+
+body > header, 
+body > footer {
+  background-color: var(--clr-bg-header-footer);
+}
+
+nav {
+  background-color: var(--clr-bg-nav);
+}
+
+main { 
+  background-color: var(--clr-bg-main);
+}
+
