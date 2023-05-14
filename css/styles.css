@@ -67,9 +67,7 @@ main > * {
 section {
   min-height: 100vh;
   min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+
 
 }
 
@@ -116,10 +114,13 @@ body > header > a {
 
 /* Start of Home Section */
 
-#home {
+#home { 
   position: relative;
   justify-content: center;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 #home::before {
@@ -180,22 +181,42 @@ body > header > a {
 
 /* Start of Menu Section */
 
+
 #menu > .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   gap: 1em;
-  height: 5em;
 }
 
-#menu > .grid-container > * {
-  background-color:pink;
+#menu > .grid-container > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--clr-bg-nav);
+  padding: 0.5em;
+  border-radius: 10px;
+}
+
+#menu > .grid-container > div:hover {
+  background-color: var(--clr-bg-nav-highlight);
+}
+
+#menu > .grid-container > div > p:nth-child(3) {
+  font-weight: 800;
+}
+
+#menu > .grid-container > div > div {
+  flex: 100%;
 }
 
 #menu > .grid-container > div > div > img {
-  opacity: 0.2;
+  opacity: 0.8;
   padding: 0.5em;
   object-fit: contain;
   width: 100%;
   height: 100%;
-
 }
+
+
