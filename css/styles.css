@@ -29,27 +29,41 @@ body {
   color: var(--clr-text);
 }
 
-body > header, 
-body > footer {
+body >.page-wrapper > .main-wrapper > header, 
+body >.page-wrapper > .main-wrapper > footer {
   background-color: var(--clr-bg-header-footer);
 }
 
-nav {
+.nav-container {
   background-color: var(--clr-bg-nav);
-}
-main { 
-  background-color: var(--clr-bg-main);
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  height: 100vh;
+  height: 100dvh;
 }
 
-body > header,
-body > footer,
+main { 
+  background-color: var(--clr-bg-main);
+  
+}
+
+body >.page-wrapper > .main-wrapper > header, 
+body >.page-wrapper > .main-wrapper > footer,
 main > * {
   padding: 1em;
 }
 
+section {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
 
-.main-container {
-  display: grid;
-  /* grid-auto-flow: column; */
-  grid-template-columns: 0.1fr 1fr;
+.page-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-wrapper {
+  width: 100%;
 }
