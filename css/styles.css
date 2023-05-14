@@ -147,11 +147,18 @@ nav > ul > li > a:hover {
   font-size: var(--ff-size-regular);
 }
 
+#home > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
 #home > div > a {
   padding: 1em;
   border-radius: 10px;
-  /* width: max-content; */
+  width: max-content;
   border: 1px solid var(--clr-bg-header-footer);
+  display: block;
 }
 
 #home > div > a:nth-child(2) {
