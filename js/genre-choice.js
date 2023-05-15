@@ -1,6 +1,6 @@
-const genreBtns = document.querySelectorAll("#music > .grid-container > div");
+const genreBtns = document.querySelectorAll("#music > .grid-container > button");
 
-console.log(genreBtns);
+// console.log(genreBtns);
 
 genreBtns.forEach(btn => {
   btn.addEventListener("click", () => {
@@ -15,4 +15,5 @@ function HighlightBtn(btn) {
     btn.classList.remove("genre-highlight");
   });
   btn.classList.add("genre-highlight");
+  console.log(btn.value);
 }

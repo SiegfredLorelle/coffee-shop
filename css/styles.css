@@ -261,38 +261,36 @@ body > header {
 
 }
 
-#music > .grid-container > div {
+#music > .grid-container > button {
   height: 15em;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   border-radius: 15px;
 }
 
 
 
-#music > .grid-container > div > button {
+#music > .grid-container > button > span {
   width: 100%;
   height: 100%;
   background-color: var(--clr-bg-nav);
   border-radius: 15px  15px 0 0;
-  
   font-size: var(--ff-size-regular);
+  display: grid;
+  align-items: center;
 }
 
-#music > .grid-container > div.genre-highlight {
+#music > .grid-container > button.genre-highlight {
   box-shadow: 5px 5px var(--clr-text);
 }
 
-#music > .grid-container > div.genre-highlight > i,
-#music > .grid-container > div:hover > i {
+#music > .grid-container > button.genre-highlight > i,
+#music > .grid-container > button:hover > i {
   visibility: visible;
   background-color: var(--clr-bg-header-footer-highlight);
 }
 
-#music > .grid-container > div > i {
+#music > .grid-container > button > i {
   padding: 0.5em;
   font-size: var(--ff-size-regular);
   visibility: hidden;
