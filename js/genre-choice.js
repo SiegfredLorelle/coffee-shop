@@ -53,28 +53,23 @@ genreBtnPlayBtns.forEach(btn => {
 playBtn.addEventListener("click", togglePlay);
 
 
-
-
-
-audioPlayer.addEventListener("play", () => {
-  playBtn.lastChild.classList.remove("fa-play");
-  playBtn.lastChild.classList.add("fa-pause");
-});
-
-audioPlayer.addEventListener("pause", () => {
-  playBtn.lastChild.classList.remove("fa-pause");
-  playBtn.lastChild.classList.add("fa-play");
-});
-
-
 function playAudio() {
   audioPlayer.play();
-  playBtn.lastChild.classList.remove("fa-play");
-  playBtn.lastChild.classList.add("fa-pause");
+  changeIcon(playBtn.lastChild, "fa-play", "fa-pause");
+  if (highlightedBtn) {
+    changeIcon(highlightedBtn.lastChild, "fa-circle-play", "fa-circle-pause");
+  }
 }
 
 function pauseAudio() {
   audioPlayer.pause();
-  playBtn.lastChild.classList.remove("fa-pause");
-  playBtn.lastChild.classList.add("fa-play");
+  changeIcon(playBtn.lastChild, "fa-pause", "fa-play");
+  if (highlightedBtn) {
+    changeIcon(highlightedBtn.lastChild, "fa-circle-pause", "fa-circle-play");
+  }
+}
+
+function changeIcon(icon, from, to) {
+  icon.classList.remove(from);
+  icon.classList.add(to);
 }
