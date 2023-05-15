@@ -1,6 +1,8 @@
-const genreBtns = document.querySelectorAll("#music > .grid-container > button");
-
-// console.log(genreBtns);
+const genreBtns = document.querySelectorAll(
+  "#music > .grid-container > button"
+);
+const audioPlayer = document.querySelector("#music > .audio-player");
+// console.log(audioPlayer);
 
 genreBtns.forEach(btn => {
   btn.addEventListener("click", () => {
@@ -16,4 +18,16 @@ function HighlightBtn(btn) {
   });
   btn.classList.add("genre-highlight");
   console.log(btn.value);
+  audioPlayer.src = `./audio/${btn.value}.mp3`;
+  togglePlay();
 }
+
+function togglePlay() {
+  console.log(audioPlayer.paused);
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+  }
+  else {
+    audioPlayer.pause();
+  }
+};
