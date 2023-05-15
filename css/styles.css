@@ -189,35 +189,43 @@ body > header > a {
   gap: 1em;
 }
 
-#menu > .grid-container > div {
+#menu > .grid-container > figure {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   background-color: var(--clr-bg-nav);
   padding: 0.5em;
   border-radius: 10px;
 }
 
-#menu > .grid-container > div:hover {
+#menu > .grid-container > figure:hover {
   background-color: var(--clr-bg-nav-highlight);
 }
 
-#menu > .grid-container > div > p:nth-child(3) {
+#menu > .grid-container > figure > p:nth-child(3) {
   font-weight: 800;
 }
 
-#menu > .grid-container > div > div {
-  flex: 100%;
+#menu > .grid-container > figure > figcaption > span {
+  font-weight: 800;
+}
+#menu > .grid-container > figure > figcaption {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
-#menu > .grid-container > div > div > img {
+/* #menu > .grid-container > figure > div {
+} */
+
+#menu > .grid-container > figure > img {
+  flex: 100%;
   opacity: 0.8;
   padding: 0.5em;
   object-fit: contain;
   width: 100%;
-  height: 100%;
+  height: 70%;
 }
 
 
