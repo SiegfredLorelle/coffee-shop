@@ -7,7 +7,7 @@
   --clr-bg-main: #f1e8b0;
 
   --clr-bg-nav-highlight: #fff48e6e;
-  --clr-bg-header-footer-highlight: #ccaa666e;
+  --clr-bg-header-footer-highlight: #dab776a8;
 
   --ff-size-large: clamp(3em, 3em + max(1vw, 1vh), 10em);
   --ff-size-regular: clamp(1em, 1em + max(1vw, 1vh), 7.5em);
@@ -67,8 +67,11 @@ main > * {
 section {
   min-height: 100vh;
   min-height: 100dvh;
+}
 
-
+button {
+  background-color: transparent;
+  border: none;
 }
 
 .main-wrapper {
@@ -291,4 +294,40 @@ body > header {
   padding: 0.5em;
   font-size: var(--ff-size-regular);
   visibility: hidden;
+}
+
+#music > .audio-control-container {
+  background-color: var(--clr-bg-header-footer);
+  border-radius: 2em;
+  display: flex;
+  padding: 0.5em 1em;
+  max-width: 300px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+#music > .audio-control-container > * {
+  padding: 0 1em;
+}
+
+#music > .audio-control-container > button {
+  height: 3em;
+  /* padding: 1em; */
+  /* margin: 0 0.5em; */
+
+  border-radius: 50%;
+
+}
+
+#music > .audio-control-container > button:hover {
+  background-color: var(--clr-bg-header-footer-highlight);
+}
+
+#music > .audio-control-container > button:nth-child(2) {
+  margin-left: auto;
+  margin-right: 0.25em;
+}
+
+#music > .audio-control-container > input[type="range"] {
+  accent-color: var(--clr-bg-nav);
 }
