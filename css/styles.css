@@ -303,18 +303,17 @@ body > header {
 
 
 
-
 #music > .audio-control-container {
   background-color: var(--clr-bg-header-footer);
   border-radius: 2em;
   display: flex;
   padding: 0.5em 1em;
-  max-width: 175px;
+  max-width: 300px;
   margin: auto;
   justify-content: space-between;
 }
 
-#music > .audio-control-container > * {
+#music > .audio-control-container > button {
   padding: 0 1em;
 }
 

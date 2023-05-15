@@ -10,9 +10,10 @@ const playBtn = document.querySelector(
   ".audio-control-container > button:nth-child(1)"
 );
 
+
 let highlightedBtn;
 
-console.log(genreBtnPlayBtns);
+// console.log(volumeSlider); 
 
 genreBtns.forEach(btn => {
   btn.addEventListener("click", () => {
@@ -26,7 +27,6 @@ function HighlightBtn(btn) {
   if (audioPlayer.src.includes(`${btn.value}.mp3`)) {
     return;
   }
-
   genreBtns.forEach(btn => {
     btn.classList.remove("genre-highlight");
   });
@@ -72,4 +72,20 @@ function pauseAudio() {
 function changeIcon(icon, from, to) {
   icon.classList.remove(from);
   icon.classList.add(to);
+}
+
+
+
+
+
+const volumeSlider = document.querySelector(
+  ".audio-control-container > input[type='range']"
+);
+
+updateVol();
+volumeSlider.addEventListener("input", updateVol);
+
+
+function updateVol() {
+  audioPlayer.volume = volumeSlider.value;
 }
