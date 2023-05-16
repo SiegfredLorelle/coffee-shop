@@ -372,3 +372,20 @@ body > header {
 /* ========================================================================== */
 
 /* Start of Location Section */
+
+#location {
+  min-height: initial;
+  padding: 2em;
+}
+
+#location > .grid-container > div {
+  background-color: var(--clr-bg-nav);
+  display: grid;
+  border-radius: 15px;
+  padding: 1em;
+  text-align: center;
+}
+
+#location > .grid-container > div > h3 {
+  padding: 1em;
+}
