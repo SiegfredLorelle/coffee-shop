@@ -44,7 +44,7 @@ nav.side-nav {
   border-radius: 15px 15px 0 0;
 }
 
-nav.side-nav.desktop {
+.main-wrapper.main-wrapper.desktop > nav.side-nav {
   top: 0;
   position: sticky;
   position: -webkit-sticky;

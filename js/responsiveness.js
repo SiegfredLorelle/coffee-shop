@@ -3,16 +3,18 @@ const sideNav = mainWrapper.querySelector(".side-nav");
 const sideNavContainer = sideNav.querySelector("ul");
 const footer = document.querySelector("footer");
 
+changeLayout();
+window.addEventListener("resize", changeLayout);
 
-deviceWidth = window.innerWidth;
-deviceHeight = window.innerHeight;
 
-console.log(deviceWidth, deviceHeight, sideNav);
+function changeLayout() {
+  if (window.innerWidth > window.innerHeight) {
+    mainWrapper.classList.add("desktop");
+    footer.classList.add("desktop");
+  }
+  else {
+    mainWrapper.classList.remove("desktop");
+    footer.classList.remove("desktop");
+  }
 
-if (deviceWidth > deviceHeight) {
-  mainWrapper.classList.toggle("desktop");
-  sideNavContainer.classList.toggle("desktop");
-  sideNav.classList.toggle("desktop");
-  footer.classList.toggle("desktop");
-  // footer
 }
