@@ -366,13 +366,18 @@ body > header {
   border-radius: 15px;
 }
 
-#jobs > .grid-container > div > p {
-  font-size: var(--ff-size-regular);
-  display: grid;
+#jobs > .grid-container > div > h3 {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
-  height: 5em;
-  padding: 0.25em;
+  justify-content: center;
+  height: 7.5em;
+  padding: 1em 1em 0 1em;
+}
+
+#jobs > .grid-container > div > h3 > i {
+  padding-bottom: 0.5em;
+  /* font-size: smaller; */
 }
 
 #jobs > .grid-container > div > a {
@@ -380,6 +385,8 @@ body > header {
   background-color: var(--clr-bg-header-footer-highlight);
   text-align: center;
   padding: 0.5em;
+  width: 50%;
+  margin: 0.5em auto;
 }
 
 /* End of Jobs Section */
