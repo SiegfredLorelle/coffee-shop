@@ -121,7 +121,7 @@ nav.side-nav > ul > li > a {
   padding: 1em;
 }
 
-nav.side-nav > ul > li > a:hover {
+.main-wrapper.desktop > nav.side-nav > ul > li > a:hover {
   background-color: var(--clr-bg-nav-highlight);
 }
 
@@ -159,7 +159,7 @@ body > header {
 
 /* Start of Home Section */
 
-#home { 
+#home {
   position: relative;
   justify-content: center;
   z-index: 1;
@@ -188,10 +188,8 @@ body > header {
   filter: blur(0.25em);
 }
 
-
 #home > * {
   margin: 1.5em;
-
 
 }
 
@@ -265,6 +263,13 @@ body > header {
   object-fit: contain;
   width: 100%;
   height: 70%;
+}
+
+#menu > .grid-container > figure:hover > img {
+  animation: popout 0.25s ease-in forwards;
+}
+#menu > .grid-container > figure:not(:hover) > img {
+  animation: popin 0.25s ease-out;
 }
 
 /* End of Menu Section */
@@ -451,6 +456,30 @@ footer > nav > ul > li {
 /* ========================================================================== */
 
 
+
+@keyframes popout {
+  from {
+    transform: scale(1) rotate(0);
+    opacity: 0.8;
+  }
+  to {
+    transform: scale(1.5) rotate(15deg);
+    opacity: initial;
+  }
+}
+@keyframes popin {
+  from {
+    transform: scale(1.5) rotate(15deg);
+    opacity: initial;
+  }
+  to {
+    transform: scale(1) rotate(0);
+    opacity: 0.8;
+  }
+}
+
+
+
 @media screen and (max-height: 425px) {
   .main-wrapper.desktop > nav.side-nav > ul {
     gap: 1rem;
@@ -459,6 +488,10 @@ footer > nav > ul > li {
 
   .main-wrapper.desktop > nav.side-nav > ul > li > a {
     padding: 0em;
+  }
+
+  .main-wrapper.desktop > nav.side-nav > ul > li > a:hover {
+    background-color: initial;
   }
 
   #menu > .grid-container > figure {
