@@ -40,8 +40,8 @@ nav.side-nav {
   position: fixed;
   bottom: 0;
   width: 100%;
-  z-index: 1;
-  
+  z-index: 2;
+  border-radius: 15px 15px 0 0;
 }
 
 nav.side-nav.desktop {
@@ -51,6 +51,7 @@ nav.side-nav.desktop {
   height: 100vh;
   height: 100dvh;
   width: min-content;
+  border-radius: 0;
 }
 
 
@@ -71,7 +72,7 @@ main {
 
 nav.side-nav,
 body > header, 
-body > footer, 
+footer, 
 main > * {
   padding: 1em;
 }
@@ -93,17 +94,17 @@ button {
   flex-direction: column;
 }
 
-.main-wrapper.desktop {
+.main-wrapper.main-wrapper.desktop {
   flex-direction: row;
 }
 
 nav.side-nav > ul {
   display: flex;
   gap: 1rem;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
-nav.side-nav > ul.desktop {
+.main-wrapper.desktop > nav.side-nav > ul {
   flex-direction: column;
   justify-content: center;
 }
@@ -115,6 +116,10 @@ nav.side-nav > ul > li {
 
 nav.side-nav > ul > li > a {
   border-radius: 10px;
+  padding: 0.5em 0.15em;
+}
+
+.main-wrapper.desktop > nav.side-nav > ul > li > a {
   padding: 1em;
 }
 
@@ -420,15 +425,23 @@ body > header {
 
 footer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  /* margin-bottom: 102px; */
-  margin-bottom: 6.25em;
+  justify-content: center;
+  padding-bottom: 7.25em;
 }
 footer.desktop {
-  margin: 0;
+  justify-content: space-between;
+  padding-bottom: 1em;
 }
 
+
+footer > nav {
+  display: none;
+}
+
+footer.desktop > nav {
+  display: block;
+}
 
 footer > nav > ul {
   display: flex;
