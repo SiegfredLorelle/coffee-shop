@@ -131,7 +131,7 @@ nav.side-nav > ul > li > a:hover {
 .grid-container {
   margin: 1em;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1em;
 }
 
@@ -465,6 +465,20 @@ footer > nav > ul > li {
   .main-wrapper.desktop > nav.side-nav > ul > li > a {
     padding: 0em;
   }
+
+  #menu > .grid-container > figure {
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  
+  #menu > .grid-container > figure > img {
+    width: 75%;
+  }
+  
+  #menu > .grid-container > figure > figcaption {
+    flex-direction: column;
+    gap: 1em;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -475,5 +489,19 @@ footer > nav > ul > li {
 
   .main-wrapper > nav.side-nav > ul > li > a {
     padding: 0em;
+  }
+
+  #menu > .grid-container > figure {
+    flex-direction: row;
+    gap: 0.5em;
+  }
+  
+  #menu > .grid-container > figure > img {
+    width: 75%;
+  }
+  
+  #menu > .grid-container > figure > figcaption {
+    flex-direction: column;
+    gap: 1em;
   }
 }
