@@ -34,7 +34,7 @@ body > footer {
   background-color: var(--clr-bg-header-footer);
 }
 
-nav {
+nav.side-nav {
   background-color: var(--clr-bg-nav);
   position: sticky;
   position: -webkit-sticky;
@@ -57,7 +57,7 @@ main {
   width: 100%;
 }
 
-nav,
+nav.side-nav,
 body > header, 
 body > footer,
 main > * {
@@ -80,23 +80,23 @@ button {
   justify-content: space-between;
 }
 
-nav > ul {
+nav.side-nav > ul {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   justify-content: center;
 }
-nav > ul > li {
+nav.side-nav > ul > li {
   display: grid;
   text-align: center;
 }
 
-nav > ul > li > a {
+nav.side-nav > ul > li > a {
   border-radius: 10px;
   padding: 1em;
 }
 
-nav > ul > li > a:hover {
+nav.side-nav > ul > li > a:hover {
   background-color: var(--clr-bg-nav-highlight);
 }
 
@@ -389,3 +389,27 @@ body > header {
 #location > .grid-container > div > h3 {
   padding: 1em;
 }
+
+/* End of Locations Section */
+
+/* ========================================================================== */
+
+/* Start of Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer > nav > ul {
+  display: flex;
+}
+
+footer > nav > ul > li {
+  padding: 0.5em 1em;
+}
+
+/* End of Footer */
+
+/* ========================================================================== */
