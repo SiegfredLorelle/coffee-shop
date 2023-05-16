@@ -75,7 +75,7 @@ main > * {
 }
 
 section {
-  padding: 5em 0;
+  margin-top: 5em;
   min-height: 75vh;
   min-height: 75dvh;
 }
@@ -133,7 +133,11 @@ nav.side-nav > ul > li > a:hover {
 }
 
 main > section {
-  padding: 0 10em;
+  padding: 0 7.5em;
+}
+
+section > h2 {
+  text-align: center;
 }
 
 /* ========================================================================== */
@@ -165,7 +169,7 @@ body > header {
   height: 100vh;
   height: 100dvh;
   padding: 0;
-
+  margin-top: 0;
 }
 
 #home::before {
@@ -187,6 +191,7 @@ body > header {
 
 #home > * {
   margin: 1.5em;
+
 
 }
 
@@ -268,6 +273,12 @@ body > header {
 
 /* Start of Music Section */
 
+#music {
+  display: flex;
+  flex-direction: column;
+}
+
+
 #music > .grid-container > button {
   height: 15em;
   display: flex;
@@ -303,9 +314,7 @@ body > header {
   width: 100%;
   text-align: center;
   border-radius: 0  0 15px 15px;
-
 }
-
 
 
 #music > .audio-control-container {
@@ -314,8 +323,9 @@ body > header {
   display: flex;
   padding: 0.5em 1em;
   max-width: 300px;
-  margin: auto;
+  /* margin: auto; */
   justify-content: space-between;
+  margin: 0 auto auto auto;
 }
 
 #music > .audio-control-container > button {
