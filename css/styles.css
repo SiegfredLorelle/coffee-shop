@@ -39,7 +39,7 @@ nav.side-nav {
   position: fixed;
   bottom: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 4;
   border-radius: 15px 15px 0 0;
 }
 
@@ -306,7 +306,6 @@ body > header {
 }
 
 #music > .grid-container > button.genre-highlight {
-  /* box-shadow: 0 0 var(--clr-text); */
   animation: button-highlight 0.25s linear forwards;
 }
 
@@ -336,7 +335,7 @@ body > header {
   border-radius: 2em;
   display: flex;
   padding: 0.5em 1em;
-  max-width: 300px;
+  width: 275px;
   justify-content: space-between;
   margin: 4em auto auto auto;
 }
@@ -377,20 +376,36 @@ body > header {
   background-color: var(--clr-bg-nav);
   display: grid;
   border-radius: 15px;
+  z-index: 0;
+  transition: background-color 0.25s ease-in-out;
 }
 
-#jobs > .grid-container > div > h3 {
+#jobs > .grid-container > div:hover {
+  background-color: var(--clr-bg-header-footer);
+}
+
+
+#jobs > .grid-container > div > hgroup {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 7.5em;
   padding: 1em 1em 0 1em;
+  z-index: 1;
+}
+
+#jobs > .grid-container > div > hgroup > * {
+  padding: 0.25em;
+  transition: transform 0.25s ease-in-out;
+}
+
+#jobs > .grid-container > div:hover > hgroup > * {
+  transform: scale(1.25);
 }
 
 #jobs > .grid-container > div > h3 > i {
   padding-bottom: 0.5em;
-  /* font-size: smaller; */
 }
 
 #jobs > .grid-container > div > a {
@@ -400,6 +415,15 @@ body > header {
   padding: 0.5em;
   width: 50%;
   margin: 0.5em auto;
+  z-index: 2;
+  transition:
+    width 0.25s linear,
+    background-color 0.25s ease-in-out;
+}
+
+#jobs > .grid-container > div:hover > a {
+  width: 80%;
+  background-color: var(--clr-bg-body);
 }
 
 /* End of Jobs Section */
@@ -503,6 +527,13 @@ footer > nav > ul > li {
     box-shadow: none;
   }
 }
+
+/* @keyframes jobs-hover {
+  to {
+    width: 80%;
+    background-color: var(--clr-bg-main);
+  }
+} */
 
 
 
