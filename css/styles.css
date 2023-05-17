@@ -171,6 +171,7 @@ body > header {
   margin: 0;
 }
 
+/* bg image: https://www.dreamstime.com/stock-photo-coffee-background-image11487150 */
 #home::before {
   width: 100%;
   height: 100%;
@@ -179,7 +180,7 @@ body > header {
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: url("../img/image-removebg-preview.png");
+  background-image: url("../img/coffee-bg.png");
   background-repeat: no-repeat;
   background-position: right;
   background-size: cover;
