@@ -11,10 +11,7 @@ const playBtn = document.querySelector(
 );
 
 
-// console.log(genreBtns[0]);
 let highlightedBtn = genreBtns[0];
-
-// console.log(volumeSlider); 
 
 genreBtns.forEach(btn => {
   btn.addEventListener("click", () => {
@@ -24,6 +21,7 @@ genreBtns.forEach(btn => {
 });
   
 
+/* Remove all buttons' highlight, then highlight the clicked btn */
 function HighlightBtn(btn) {
   if (audioPlayer.src.includes(`${btn.value}.mp3`)) {
     return;
@@ -37,6 +35,11 @@ function HighlightBtn(btn) {
 }
 
 
+genreBtnPlayBtns.forEach(btn => {
+  btn.addEventListener("click", togglePlay);
+});
+playBtn.addEventListener("click", togglePlay);
+
 
 function togglePlay() {
   if (audioPlayer.src && audioPlayer.paused) {
@@ -46,13 +49,6 @@ function togglePlay() {
     pauseAudio();
   }
 };
-
-
-genreBtnPlayBtns.forEach(btn => {
-  btn.addEventListener("click", togglePlay);
-});
-playBtn.addEventListener("click", togglePlay);
-
 
 function playAudio() {
   audioPlayer.play();
@@ -70,12 +66,11 @@ function pauseAudio() {
   }
 }
 
+/* Chang icon by replacing last class item */
 function changeIcon(icon, to) {
   icon.classList.remove(icon.classList.item(1));
   icon.classList.add(to);
 }
-
-
 
 
 
@@ -87,12 +82,13 @@ const muteBtn = document.querySelector(
   ".audio-control-container > button:nth-child(2)"
   );
   
+let prevVol = 0.25;
+
   updateVol();
   volumeSlider.addEventListener("input", updateVol);
   
   muteBtn.addEventListener("click", () => {
     toggleVol();
-    
   });
   
   
@@ -114,7 +110,6 @@ function updateVolIcon() {
 }
 
 
-let prevVol = 0.25;
 function toggleVol() {
   if (volumeSlider.value != 0) {
     prevVol = volumeSlider.value;
