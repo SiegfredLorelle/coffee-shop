@@ -104,16 +104,12 @@ nav.side-nav > ul {
 
 .main-wrapper.desktop > nav.side-nav > ul {
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 nav.side-nav > ul > li {
   display: grid;
   text-align: center;
-}
-
-nav.side-nav > ul > li > a > span {
-  /* display: none; */
 }
 
 nav.side-nav > ul > li > a {
@@ -124,6 +120,8 @@ nav.side-nav > ul > li > a {
 
 .main-wrapper.desktop > nav.side-nav > ul > li > a {
   padding: 1em;
+  transition: background-color 0.1s linear;
+  background-color: transparent;
 }
 
 .main-wrapper.desktop > nav.side-nav > ul > li > a:hover {
@@ -221,7 +219,6 @@ body > header {
 
 #home > div > a:hover {
   background-color: var(--clr-bg-header-footer-highlight);
-  border-color: var(--clr-bg-header-footer-highlight);
 }
 
 /* End of Home Section */
@@ -238,6 +235,7 @@ body > header {
   background-color: var(--clr-bg-nav);
   padding: 0.5em;
   border-radius: 10px;
+  transition: background-color 0.25s ease-in-out;
 }
 
 #menu > .grid-container > figure:hover {
@@ -443,6 +441,11 @@ body > header {
   border-radius: 15px;
   padding: 1em;
   text-align: center;
+  transition: background-color 0.25s ease-in-out;
+}
+
+#location > .grid-container > div:hover {
+  background-color: var(--clr-bg-nav-highlight);
 }
 
 #location > .grid-container > div > h3 {
@@ -528,14 +531,6 @@ footer > nav > ul > li {
   }
 }
 
-/* @keyframes jobs-hover {
-  to {
-    width: 80%;
-    background-color: var(--clr-bg-main);
-  }
-} */
-
-
 
 @media screen and (max-height: 425px) {
   .main-wrapper.desktop > nav.side-nav > ul {
@@ -549,6 +544,10 @@ footer > nav > ul > li {
 
   .main-wrapper.desktop > nav.side-nav > ul > li > a:hover {
     background-color: initial;
+  }
+
+  nav.side-nav > ul > li > a > span {
+    display: none;
   }
 
   #menu > .grid-container > figure {
@@ -578,6 +577,9 @@ footer > nav > ul > li {
     padding: 0em;
   }
 
+  nav.side-nav > ul > li > a > span {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1024px) {
