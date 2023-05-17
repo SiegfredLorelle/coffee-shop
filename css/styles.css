@@ -112,6 +112,10 @@ nav.side-nav > ul > li {
   text-align: center;
 }
 
+nav.side-nav > ul > li > a > span {
+  /* display: none; */
+}
+
 nav.side-nav > ul > li > a {
   border-radius: 10px;
   padding: 0.5em 0.15em;
@@ -286,7 +290,10 @@ body > header {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
+
 }
+
+
 
 #music > .grid-container > button > span {
   width: 100%;
@@ -299,7 +306,12 @@ body > header {
 }
 
 #music > .grid-container > button.genre-highlight {
-  box-shadow: 5px 5px var(--clr-text);
+  /* box-shadow: 0 0 var(--clr-text); */
+  animation: button-highlight 0.25s linear forwards;
+}
+
+#music > .grid-container > button:not(.genre-highlight) {
+  animation: button-unhighlight 0.25s linear;
 }
 
 #music > .grid-container > button.genre-highlight > i,
@@ -325,9 +337,8 @@ body > header {
   display: flex;
   padding: 0.5em 1em;
   max-width: 300px;
-  /* margin: auto; */
   justify-content: space-between;
-  margin: 0 auto auto auto;
+  margin: 4em auto auto auto;
 }
 
 #music > .audio-control-container > button {
@@ -472,6 +483,24 @@ footer > nav > ul > li {
   to {
     transform: scale(1) rotate(0);
     opacity: 0.8;
+  }
+}
+
+@keyframes button-highlight {
+  to {
+    transform: translate(-5px, -5px);
+    box-shadow: 10px 10px var(--clr-text);
+  }
+}
+
+@keyframes button-unhighlight {
+  from {
+      transform: translate(-5px, -5px);
+      box-shadow: 10px 10px var(--clr-text);
+  }
+  to {
+    transform: translate(0, 0);
+    box-shadow: none;
   }
 }
 
