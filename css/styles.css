@@ -27,7 +27,7 @@ body {
   background-color: var(--clr-bg-body);
   color: var(--clr-text);
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 body > header, 
@@ -80,6 +80,8 @@ section {
   margin-top: 5em;
   min-height: 75vh;
   min-height: 75dvh;
+  margin: 0 7.5em;
+  scroll-snap-align: start;
 }
 
 button {
@@ -134,11 +136,6 @@ nav.side-nav > ul > li > a {
   gap: 1em;
 }
 
-main > section {
-  padding: 0 7.5em;
-  scroll-snap-align: start;
-}
-
 section > h2 {
   text-align: center;
 }
@@ -171,8 +168,8 @@ body > header {
   flex-wrap: wrap;
   height: 100vh;
   height: 100dvh;
-  padding: 0;
-  margin-top: 0;
+  /* padding: 0; */
+  margin: 0;
 }
 
 #home::before {
@@ -528,7 +525,7 @@ footer > nav > ul > li {
 
 @media screen and (max-width: 1024px) {
   main > section {
-    padding: 5em 0;
+    margin: 5em 0;
   }
   #menu > .grid-container > figure {
     flex-direction: row;
