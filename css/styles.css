@@ -27,11 +27,13 @@ body {
   background-color: var(--clr-bg-body);
   color: var(--clr-text);
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 body > header, 
 body > footer {
   background-color: var(--clr-bg-header-footer);
+  scroll-snap-align: start;
 }
 
 nav.side-nav {
@@ -134,6 +136,7 @@ nav.side-nav > ul > li > a {
 
 main > section {
   padding: 0 7.5em;
+  scroll-snap-align: start;
 }
 
 section > h2 {
